@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang, Perawat Hebat!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e, #ffb5b5);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 15px 0;
+        }
+
+        .highlight {
+            font-size: 1.5em;
+            color: #ffe66d;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: lightblue;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+
+        .quotes {
+            font-size: 1.2em;
+            line-height: 1.5;
+            max-width: 90%;
+            padding: 50px 10px;
+            margin-top: 120px;
+            animation: fadeIn 2s ease-in;
+            flex: 1;
+        }
+
+        .quotes p {
+            margin: 5px 0;
+        }
+
+        .highlight-text {
+            font-size: 1.5em;
+            color: #ffe66d;
+            font-weight: bold;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+
+        footer {
+            background-color: lightblue;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.9em;
+            color: #333;
+            font-weight: bold;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p class="highlight">Di klik dulu ya Bu Perawat Hebat 😁</p>
+    </div>
+
+    <div class="quotes" id="message">
+        <p>Kamu itu luar biasa!</p>
+        <p>Menjalani shift panjang selama 6 bulan,</p>
+        <p>Pagi, siang, bahkan malam,</p>
+        <p>Menjaga pasien dengan penuh kasih sayang,</p>
+        <p>Di kala orang lain terlelap, kamu tetap terjaga.</p>
+        <p>6 bulan bukan waktu yang sebentar,</p>
+        <p>Tapi kamu tetap semangat,</p>
+        <p>Belajar, merawat, dan memberikan yang terbaik.</p>
+        <p>Setiap hari penuh tantangan,</p>
+        <p>Namun senyummu selalu ada untuk pasien.</p>
+        <p class="highlight-text">Siapa lagi kalau bukan yang baca...</p>
+        <p>Meski hanya 6 bulan di rumah sakit,</p>
+        <p>Kenangan dan pengalaman ini akan selalu melekat.</p>
+        <p>Jadi jangan pernah merasa sendiri...</p>
+        <p class="highlight-text">Dunia ini lebih baik karena ada perawat seperti kamu! ❤️</p>
+    </div>
+
+    <audio id="audioPlayer">
+        <source src="musik/kamu.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <footer>
+        &copy; 2025 Untuk Perawat Hebat Seperti Kamu ❤️
+    </footer>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('audioPlayer');
+            audio.play();
+        });
+
+        function playMusic() {
+            var audio = document.getElementById('audioPlayer');
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
